@@ -1,0 +1,1 @@
+alert("Yoo we are in the script")

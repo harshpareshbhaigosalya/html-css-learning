@@ -1,0 +1,69 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Selectors Demo</h1>
+
+    <!-- Element Selector Example -->
+    <section class="section-basic">
+        <h2>Basic Selectors</h2>
+        <p>This is a paragraph (element selector).</p>
+        <p class="special">This paragraph has a class (class selector).</p>
+        <p id="unique">This paragraph has an ID (ID selector).</p>
+    </section>
+
+    <!-- Descendant and Child Selectors Example -->
+    <section class="section-relationships">
+        <h2>Relationship Selectors</h2>
+        <div class="parent">
+            <p>Direct child of div (child selector)</p>
+            <span>
+                <p>Descendant of div (descendant selector)</p>
+            </span>
+            <p>Another direct child</p>
+        </div>
+    </section>
+
+    <!-- Adjacent and Sibling Selectors Example -->
+    <section class="section-siblings">
+        <h2>Sibling Selectors</h2>
+        <p>First paragraph</p>
+        <p>Adjacent sibling</p>
+        <span>Some span</span>
+        <p>General sibling</p>
+    </section>
+
+    <!-- Attribute Selectors Example -->
+    <section class="section-attributes">
+        <h2>Attribute Selectors</h2>
+        <input type="text" placeholder="Text input">
+        <input type="email" placeholder="Email input">
+        <a href="https://example.com">External link</a>
+        <a href="#internal">Internal link</a>
+    </section>
+
+    <!-- Pseudo-classes Example -->
+    <section class="section-pseudo">
+        <h2>Pseudo-classes</h2>
+        <button>Hover over me!</button>
+        <ul>
+            <li>First child</li>
+            <li>Second child</li>
+            <li>Third child</li>
+            <li>Fourth child</li>
+        </ul>
+    </section>
+
+    <!-- Pseudo-elements Example -->
+    <section class="section-pseudo-elements">
+        <h2>Pseudo-elements</h2>
+        <p class="first-line">This paragraph demonstrates first-line and first-letter pseudo-elements. The content is long enough to show multiple lines.</p>
+        <div class="custom-before-after">Content with before and after</div>
+    </section>
+</body>
+</html> 

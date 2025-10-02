@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 24px;
+    background: #f7faff;
+}
+section {
+    margin: 32px 0;
+    padding: 20px;
+    background: #e3f0fc;
+    border-radius: 8px;
+    border: 1px solid #b3d1f7;
+}
+
+/* Block vs Inline */
+.block-demo {
+    background: #b3e2f7;
+    padding: 12px;
+    margin-bottom: 8px;
+    /* Default: display: block; */
+}
+.inline-demo {
+    background: #f7e3b3;
+    padding: 4px 10px;
+    /* Default: display: inline; */
+    margin-right: 6px;
+}
+
+/* Making Block Elements Inline */
+.inline-block-demo {
+    display: inline;
+    background: #b3f7c2;
+    padding: 4px 10px;
+    margin-right: 6px;
+    border: 1px solid #7adf8c;
+}
+
+/* Inline vs Inline-block */
+.inline-vs {
+    display: inline;
+    background: #f7b3b3;
+    padding: 12px 0; /* Top padding is ignored for inline */
+    width: 120px;    /* Width is ignored for inline */
+    margin-right: 6px;
+    border: 1px solid #e27a7a;
+}
+.inline-block-vs {
+    display: inline-block;
+    background: #b3b8f7;
+    padding: 12px 0; /* Top padding works for inline-block */
+    width: 120px;    /* Width works for inline-block */
+    margin-right: 6px;
+    border: 1px solid #7a7ae2;
+    text-align: center;
+}
+
+/* Visibility vs Display: none */
+.visible-demo {
+    background: #b3f7f2;
+    padding: 8px;
+    margin-bottom: 6px;
+}
+.hidden-demo {
+    background: #f7b3e2;
+    padding: 8px;
+    visibility: hidden; /* Hidden but takes up space */
+    margin-bottom: 6px;
+}
+.none-demo {
+    background: #e2b3f7;
+    padding: 8px;
+    display: none; /* Not rendered at all */
+    margin-bottom: 6px;
+}
+
+/* Flex (short intro) */
+.flex-demo {
+    display: flex;
+    gap: 12px;
+    background: #d1f7b3;
+    padding: 12px;
+    border-radius: 6px;
+}
+.flex-demo > div {
+    background: #a7e27a;
+    padding: 16px 24px;
+    border-radius: 4px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Grid (short intro) */
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background: #f7d1b3;
+    padding: 12px;
+    border-radius: 6px;
+}
+.grid-demo > div {
+    background: #e2a77a;
+    padding: 16px 0;
+    border-radius: 4px;
+    text-align: center;
+} 

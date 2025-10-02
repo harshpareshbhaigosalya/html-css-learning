@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS media query</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        /*only tells the browser to apply the styles only if the media type is supported by browsers */
+        @media only screen and (max-width: 955px){
+            body{
+                background-color: green;
+            }
+            .boxes{
+                /*on shrinking boxes will become vertical from horizontal */  
+                flex-direction: column; /* Stack boxes vertically */
+            }
+        }
+        .boxes{
+            display: flex;  
+        }
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+         <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+         </div>
+</body>
+</html>

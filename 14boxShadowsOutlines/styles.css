@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7faff;
+    margin: 0;
+    padding: 24px;
+}
+section {
+    margin: 32px 0;
+    padding: 20px;
+    background: #e3f0fc;
+    border-radius: 8px;
+    border: 1px solid #b3d1f7;
+}
+.box {
+    width: 220px;
+    height: 70px;
+    margin: 18px 18px 18px 0;
+    padding: 18px;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Box Shadow Examples */
+.shadow-basic {
+    /* box-shadow: offset-x offset-y blur-radius color; */
+    box-shadow: 4px 4px 12px #b3b3b3;
+}
+.shadow-colored {
+    /* Colored shadow */
+    box-shadow: 0 6px 16px 0 #2a7ae2;
+}
+.shadow-multiple {
+    /* Multiple shadows: comma-separated */
+    box-shadow: 2px 2px 8px #e23a2a, 8px 8px 16px #2a7ae2;
+}
+.shadow-inset {
+    /* Inset shadow: shadow inside the box */
+    /*schema -> inset offset-x offset-y blur-radius color;*/ 
+    box-shadow: inset 0 2px 12px #e2a72a;
+}
+
+/* Outline Examples */
+.outline-basic {
+    /* outline: width style color; */
+    outline: 3px solid #2a7ae2;
+}
+.outline-dashed {
+    outline: 3px dashed #e23a2a;
+}
+.outline-offset {
+    outline: 3px solid #2ae2a7;
+    outline-offset: 8px; /* Space between border and outline */
+} 

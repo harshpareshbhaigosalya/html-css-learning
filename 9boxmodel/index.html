@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* <!-- box applies to both box1 and box2--> */
+        .box{
+            border: 5px solid black;
+   
+            box-sizing: border-box; /* Ensures padding and border are included in width/height */
+        }
+        /* margin is outside content, whereas padding is inside */
+        /* box-sizing: border-box; ensures that the width includes padding and border */
+        .box1{
+            background-color: aqua;
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            box-sizing: border-box; /* Ensures the width includes padding and border */
+            /*The padding and border are included inside the width and height you set. */   
+            /*without box-sizing: border-box, the width would be 200px + 5px border on each side = 210px total width*/
+        }
+        .box2{
+            background-color: yellow;
+            padding: 20px;
+            margin: 20px;
+        }
+        /* css uses margin collapsing, which means that the top margin of the second box will collapse with the bottom margin of the first box */
+        /*this means for two margings m1 and m2 colliding, the max(m1, m2) will be used, not the sum */
+    </style>
+</head>
+<body>
+    <h1>Box Model CSS Example</h1>
+    <div class="box box1">
+        <p>This is box 1 with a width of 200px and a border of 5px.</p>
+    </div>
+    <div class="box box2">
+        <p>This is box 2 with padding of 20px and a border of 5px.</p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Bounce animation</title>
+    <style>
+        .container {
+            /* transition is basically smoothly moving from one place to another */
+            background-color: rgb(10, 68, 76);
+            width: 50vw;
+            height: 40vh;
+            display: flex;
+            align-items: self-end;
+        }
+
+        .box {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            border-radius: 70px;
+            align-items: center;
+            justify-content: center;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: bounceAnimation 3s linear infinite;
+            padding: 10px;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+        }
+
+        @keyframes bounceAnimation {
+            /* First big bounce */
+            0%   { transform: translateX(0)    translateY(0)    scaleY(1) scaleX(1); }
+            5%   { transform: translateX(50px) translateY(-180px) scaleY(0.9) scaleX(1.1);}
+            10%  { transform: translateX(100px) translateY(-300px) scaleY(0.8) scaleX(1.2);}
+            15%  { transform: translateX(150px) translateY(-180px) scaleY(0.9) scaleX(1.1);}
+            20%  { transform: translateX(200px) translateY(0)    scaleY(1.2) scaleX(0.8);}
+            /* Second bounce */
+            28%  { transform: translateX(280px) translateY(-90px) scaleY(0.9) scaleX(1.1);}
+            35%  { transform: translateX(350px) translateY(-150px) scaleY(0.8) scaleX(1.2);}
+            42%  { transform: translateX(420px) translateY(-90px) scaleY(0.9) scaleX(1.1);}
+            50%  { transform: translateX(500px) translateY(0)    scaleY(1.1) scaleX(0.9);}
+            /* Third bounce */
+            57%  { transform: translateX(570px) translateY(-45px) scaleY(0.95) scaleX(1.05);}
+            62%  { transform: translateX(620px) translateY(-80px) scaleY(0.9) scaleX(1.1);}
+            67%  { transform: translateX(670px) translateY(-45px) scaleY(0.95) scaleX(1.05);}
+            75%  { transform: translateX(750px) translateY(0)    scaleY(1.05) scaleX(0.95);}
+            /* Final small bounces */
+            80%  { transform: translateX(800px) translateY(-20px) scaleY(0.98) scaleX(1.02);}
+            85%  { transform: translateX(850px) translateY(-35px) scaleY(0.96) scaleX(1.04);}
+            90%  { transform: translateX(900px) translateY(-20px) scaleY(0.98) scaleX(1.02);}
+            100% { transform: translateX(1000px) translateY(0)   scaleY(1) scaleX(1);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Ball</div>
+    </div>
+</body>
+</html>
