@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7faff;
+    margin: 0;
+    padding: 24px;
+}
+section {
+    margin: 32px 0;
+    padding: 20px;
+    background: #e3f0fc;
+    border-radius: 8px;
+    border: 1px solid #b3d1f7;
+}
+.float-demo, .float-root-demo {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    min-height: 80px;
+    position: relative;
+}
+.float-left {
+    float: left;
+    width: 120px;
+    height: 60px;
+    background: #b3e2f7;
+    border: 2px solid #2a7ae2;
+    border-radius: 6px;
+    margin-right: 16px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+}
+.float-right {
+    float: right;
+    width: 120px;
+    height: 60px;
+    background: #e2b3f7;
+    border: 2px solid #e23a2a;
+    border-radius: 6px;
+    margin-left: 16px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+}
+.normal-box {
+    background: #f7e3b3;
+    border: 2px solid #e2a72a;
+    border-radius: 6px;
+    height: 60px;
+    margin: 0 16px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+}
+.after-float {
+    margin-top: 8px;
+    color: #333;
+}
+.clear-both {
+    clear: both;
+    background: #b3f7c2;
+    border: 2px solid #7adf8c;
+    border-radius: 6px;
+    height: 60px;
+    margin-top: 12px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+}
+/* Float Root (Clearfix) */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*
+  .float-left: float left
+  .float-right: float right
+  .clear-both: clear both
+  .clearfix: float root/clearfix technique
+*/ 

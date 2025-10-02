@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute vs Relative Positioning</title>
+    <link rel="stylesheet" href="abs-vs-rel.css">
+</head>
+<body>
+    <h1>Absolute vs Relative Positioning</h1>
+    <!--
+      This page demonstrates the difference between relative and absolute positioning.
+      - Relative: Moves the element relative to its normal position, but still takes up space.
+      - Absolute: Removes the element from the normal flow and positions it relative to the nearest positioned ancestor (or the viewport if none).
+    -->
+    <div class="container">
+        <div class="rel-demo">
+            <h2>Relative Positioning</h2>
+            <div class="rel-box parent">
+                Parent (position: relative)
+                <div class="rel-box child" style="position: relative; top: 20px; left: 20px; background: #b3e2f7;">
+                    Child (position: relative; top: 20px; left: 20px)
+                </div>
+            </div>
+            <p class="description">The child is positioned relative to its <strong>own original position</strong>.</p>
+        </div>
+        <div class="abs-demo">
+            <h2>Absolute Positioning</h2>
+            <div class="abs-box parent" style="position: relative;">
+                Parent (position: relative)
+                <div class="abs-box child" style="position: absolute; top: 20px; left: 20px; background: #e2b3f7;">
+                    Child (position: absolute; top: 20px; left: 20px)
+                </div>
+            </div>
+            <p class="description">The child is positioned relative to the <strong>nearest positioned ancestor</strong> (the parent).</p>
+        </div>
+    </div>
+    <!--
+      In the left example, the child moves but still takes up space in the flow.
+      In the right example, the child is removed from the flow and positioned absolutely inside the parent.
+    -->
+</body>
+</html> 

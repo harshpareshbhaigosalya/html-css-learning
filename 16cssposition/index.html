@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .parent {
+        /* transform, filter and perspective can also make element appear as poisitoned */
+        padding: 43px;
+        margin: 33px;
+        /* position: fixed;  */
+
+        /*These 3 elements can also make it appear as positioned */
+        /* transform: translate(0);
+        filter: invert(0.5);
+        perspective: 100px; */
+        border: 3px solid purple;
+      } 
+      .box {
+        border: 2px solid black;
+        height: 433px;
+        width: 80vw;
+        padding: 3px;
+        margin: 3px;
+        border: 2px solid black;
+      }
+      /*pos is by default static , will have to explicitly change, to use top, down, left, right */
+      /*z index is used to control the stacking order of elements */
+      .box3 {
+        background-color: lightgreen;
+        /* position: fixed; Fixed positioning */
+        /* This element will stay in the same position relative to the viewport */
+        /* scrolling will not affect the pos of this element */
+        /* bottom: 0px;
+        left: 25vw; 25% from the left of the  viewport */
+
+        /* position: absolute; Absolute positioning
+            top: 50px; /* 50px from the top of the nearest positioned ancestor */
+        /* left: 50px; 50px from the left of the nearest positioned ancestor */
+      }
+      .box1 {
+        background-color: lightblue;
+        position: absolute;
+        top:0px; /* 0px from the top of the viewport */
+        /* This element will stick to the top of the viewport when scrolling */
+        
+          
+        /* position: absolute; */
+        /* top: 50px; 50px from the top of the nearest positioned ancestor */
+        /* left: 50px; 50px from the left of the nearest positioned ancestor */
+        /* position: relative; /* Relative to its normal position, for z-index need to give position other than static */
+        /* z-index: 1;    */
+      }
+      .box2 {
+        background-color: aqua;
+        /* position: relative; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!--
+  This file demonstrates all three types of CSS:
+  1. Inline CSS (highest priority)
+  2. Internal CSS (medium priority)
+  3. External CSS (lowest priority)
+  
+  Priority order (from lowest to highest):
+    External < Internal < Inline
+  If multiple rules target the same property, the one with higher priority wins.
+-->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal, and External CSS</title>
+    <!-- External CSS: Linked stylesheet (lowest priority) -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS: Styles defined in a <style> block (medium priority) -->
+    <style>
+        /* Internal CSS for the paragraph */
+        p {
+            color: #2a7ae2;
+            font-size: 1.2em;
+            background: #e3f0fc;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline CSS: Directly on the element (highest priority) -->
+    <h1 style="color: #e23a2a; text-align: center;">This is an Inline Styled Heading</h1>
+    <!-- This paragraph is styled using internal CSS -->
+    <p>This paragraph is styled using internal CSS.</p>
+    <!-- This button is styled using external CSS in styles.css -->
+    <button class="external-btn">External CSS Button</button>
+</body>
+</html> 

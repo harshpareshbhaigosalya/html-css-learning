@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Sizing Units Demo</h1>
+    <!--
+      This page demonstrates different CSS sizing units:
+      - px: Pixels (absolute)
+      - em: Relative to the font-size of the element
+      - rem: Relative to the font-size of the root (html) element
+      - %: Percentage (relative to parent)
+      - vw: Viewport width (relative to browser width)
+      - vh: Viewport height (relative to browser height)
+      - auto: Automatic sizing
+    -->
+
+    <section>
+        <h2>Pixels (px)</h2>
+        <!-- px is an absolute unit. 50px is always 50 pixels on the screen. -->
+        <div class="box px-box">width: 200px; height: 50px;</div>
+    </section>
+
+    <section>
+        <h2>em (relative to element's font-size)</h2>
+        <!-- em is relative to the font-size of the element. 1em =16px. -->
+        <div class="box em-box">width: 15em; font-size: 20px;</div>
+    </section>
+
+    <section>
+        <h2>rem (relative to root font-size)</h2>
+        <!-- rem is relative to the root (html) font-size. 1rem = root font-size. -->
+        <div class="box rem-box">width: 20rem; font-size: 18px;</div>
+    </section>
+
+    <section>
+        <h2>Percent (%)</h2>
+        <!-- % is relative to the parent element's size. -->
+        <div class="parent-percent">
+            <div class="box percent-box">width: 60% (of parent)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Viewport Width (vw) & Viewport Height (vh)</h2>
+        <!-- vw is % of viewport width, vh is % of viewport height. -->
+        <div class="box vw-box">width: 40vw; height: 10vh;</div>
+    </section>
+
+    <section>
+        <h2>auto</h2>
+        <!-- auto lets the browser decide the size based on content and context. -->
+        <div class="box auto-box">width: auto; height: auto;</div>
+    </section>
+
+    <section>
+        <h2>Mixing Units</h2>
+        <!-- You can mix units for flexible layouts. -->
+        <div class="box mixed-box">width: 50% + 100px; min-width: 200px; max-width: 600px;</div>
+    </section>
+
+    <section>
+        <h2>em in Nested Contexts</h2>
+        <!--
+          1em = the font-size of the element itself (which may be inherited from its parent).
+          This section demonstrates how 1em changes based on the parent element's font-size.
+        -->
+        <div class="em-parent-demo">
+            Parent (font-size: 24px)
+            <div class="em-child-1">Child 1 (font-size: 1em = 24px)</div>
+            <div class="em-child-2">Child 2 (font-size: 2em = 48px)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>rem in Nested Contexts</h2>
+        <!--
+          1rem = the font-size of the root (html) element.
+          This section demonstrates how rem is always based on the root, not the parent.
+        -->
+        <div class="rem-parent-demo">
+            Parent (font-size: 32px)
+            <div class="rem-child-1">Child 1 (font-size: 1rem = 16px by default)</div>
+            <div class="rem-child-2">Child 2 (font-size: 2rem = 32px by default)</div>
+        </div>
+    </section>
+</body>
+</html> 

@@ -1,4 +1,3 @@
-
 # html-css-learning
 
 A repository focused on learning and demonstrating **HTML & CSS** with detailed code snippets, examples, and best practices (e.g. centering a `<div>` and more).
@@ -148,3 +147,4 @@ Be sure to check for duplicate snippets before adding.
 
 Specify your license (e.g. MIT) to clarify how others can use / contribute.
 Example: *MIT License — see `LICENSE` file.*
+

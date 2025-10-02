@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Clear in CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Float & Clear in CSS</h1>
+    <!--
+      This page demonstrates:
+      - float: left and float: right
+      - clear property
+      - float root (clearfix technique)
+    -->
+
+    <section>
+        <h2>Float Left & Right</h2>
+        <div class="float-demo">
+            <div class="float-left">Float Left</div>
+            <div class="float-right">Float Right</div>
+            <div class="normal-box">Normal Flow</div>
+        </div>
+        <p class="after-float">This text may wrap around floated elements above.</p>
+    </section>
+
+    <section>
+        <h2>Clear Property</h2>
+        <div class="float-demo">
+            <div class="float-left">Float Left</div>
+            <div class="float-right">Float Right</div>
+            <div class="clear-both">Clear Both (starts below floats)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Float Root (Clearfix)</h2>
+        <div class="clearfix float-root-demo">
+            <div class="float-left">Float Left</div>
+            <div class="float-right">Float Right</div>
+            <div class="normal-box">Normal Flow</div>
+        </div>
+        <p class="after-float">With clearfix, the parent expands to contain floated children.</p>
+    </section>
+
+    <!--
+      - .float-left: float left
+      - .float-right: float right
+      - .clear-both: clear both
+      - .clearfix: float root/clearfix technique
+    -->
+</body>
+</html> 

@@ -1,0 +1,147 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* ===============================
+   1. BASIC SELECTORS
+   =============================== */
+
+/* Element Selector: Targets all <h2> elements */
+h2 {
+    color: #2a7ae2;
+}
+
+/* Class Selector: Targets elements with class="special" */
+.special {
+    background-color: #e3f0fc;
+    padding: 10px;
+}
+
+/* ID Selector: Targets the element with id="unique" */
+#unique {
+    border-left: 4px solid #2a7ae2;
+    padding-left: 10px;
+}
+
+/* ===============================
+   2. RELATIONSHIP SELECTORS
+   =============================== */
+
+/* Descendant Selector: Targets all <p> inside .parent, regardless of nesting level */
+.parent p {
+    margin: 10px 0;
+}
+
+/* Child Selector: Targets only direct <p> children of .parent */
+.parent > p {
+    border-bottom: 2px solid #2a7ae2;
+}
+
+/* ===============================
+   3. SIBLING SELECTORS
+   =============================== */
+
+/* Adjacent Sibling: Targets <p> that comes immediately after another <p> */
+.section-siblings p + p {
+    color: #e23a2a;
+}
+
+/* General Sibling: Targets all <p> elements that follow a <span> */
+.section-siblings span ~ p {
+    font-style: italic;
+}
+
+/* ===============================
+   4. ATTRIBUTE SELECTORS
+   =============================== */
+
+/* Exact attribute value */
+input[type="text"] {
+    border: 2px solid #2a7ae2;
+}
+
+/* Attribute contains value */
+a[href*="example"] {
+    color: #e23a2a;
+}
+
+/* Attribute starts with value */
+a[href^="#"] {
+    color: #2a7ae2;
+}
+
+/* ===============================
+   5. PSEUDO-CLASSES
+   =============================== */
+
+/* Hover state */
+button:hover {
+    background-color: #2a7ae2;
+    color: white;
+}
+
+/* First and last child */
+.section-pseudo li:first-child {
+    color: #2a7ae2;
+}
+
+.section-pseudo li:last-child {
+    color: #e23a2a;
+}
+
+/* Nth-child */
+.section-pseudo li:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+/* ===============================
+   6. PSEUDO-ELEMENTS
+   =============================== */
+
+/* First letter */
+.first-line::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2a7ae2;
+}
+
+/* First line */
+.first-line::first-line {
+    font-style: italic;
+}
+
+/* Before and After */
+.custom-before-after::before {
+    content: "🌟 ";
+}
+
+.custom-before-after::after {
+    content: " 🌟";
+}
+
+/* ===============================
+   7. COMBINING SELECTORS
+   =============================== */
+
+/* Combining multiple selectors */
+.section-basic h2,
+.section-relationships h2 {
+    text-decoration: underline;
+}
+
+/* Combining different types of selectors */
+.section-pseudo button:hover,
+.section-attributes input[type="email"]:focus {
+    box-shadow: 0 0 5px rgba(42, 122, 226, 0.5);
+} 

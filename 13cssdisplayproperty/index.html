@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Display Property Demo</h1>
+    <!--
+      This page demonstrates:
+      - How block elements can be made inline
+      - The difference between inline and inline-block
+      - Visibility vs display:none
+      - Short intro to flex and grid
+    -->
+
+    <section>
+        <h2>Block vs Inline</h2>
+        <!-- By default, div is block (takes full width, new line) -->
+        <div class="block-demo">Block element (div)</div>
+        <!-- Span is inline (flows with text, no width/height control) -->
+        <span class="inline-demo">Inline element (span)</span>
+        <span class="inline-demo">Another inline span</span>
+    </section>
+
+    <section>
+        <h2>Making Block Elements Inline</h2>
+        <!-- Using display:inline to make divs behave like inline elements -->
+        <div class="inline-block-demo">Div as inline</div>
+        <div class="inline-block-demo">Another div as inline</div>
+    </section>
+
+    <section>
+        <h2>Inline vs Inline-block</h2>
+        <!-- Inline-block allows width, height, and vertical padding, unlike inline -->
+        <span class="inline-vs">Inline (no width/padding-top)</span>
+        <span class="inline-vs">Inline</span>
+        <span class="inline-block-vs">Inline-block (width, padding-top)</span>
+        <span class="inline-block-vs">Inline-block</span>
+    </section>
+
+    <section>
+        <h2>Visibility vs Display: none</h2>
+        <div class="visible-demo">Visible (default)</div>
+        <div class="hidden-demo">Visibility: hidden (takes up space)</div>
+        <div class="none-demo">Display: none (gone from layout)</div>
+    </section>
+
+    <section>
+        <h2>Flex (short intro)</h2>
+        <div class="flex-demo">
+            <div>Flex 1</div>
+            <div>Flex 2</div>
+            <div>Flex 3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Grid (short intro)</h2>
+        <div class="grid-demo">
+            <div>Grid 1</div>
+            <div>Grid 2</div>
+            <div>Grid 3</div>
+            <div>Grid 4</div>
+        </div>
+    </section>
+</body>
+</html> 
