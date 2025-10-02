@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts and Colors</title>
+    <style>
+  
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+        * {
+            margin: 5%;
+            padding: 0;
+        }
+        /*font family multiple means if the first font is not available, the next one will be used */
+        /*for example in below, if 'Gill Sans' is not available, 'Gill Sans MT' will be used, and so on */
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 2px;;
+        }
+        p{
+            font-family: "Manrope", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 30px; /* Default font size */
+            line-height: 1.5;
+        }
+        h2{
+            text-align: center;
+            text-transform: capitalize; /* Capitalizes the first letter of each word */
+            text-decoration-thickness: 10px; /* Sets the thickness of the underline */
+            text-decoration: underline; /* Underlines the text */
+            text-decoration-color: red; /* Sets the color of the underline */
+        }
+        /* demonstrate text overflow ellipsis and clipped  */
+        .lorem{
+            font-size: 20px;
+            color: #333; /* Dark gray color */
+            font-weight: 400; /* Normal weight */
+            font-style: italic; /* Italic style */
+            
+        }
+        .lorem1 {
+            color: blue; /* Blue color for the first paragraph */
+            text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
+            overflow: hidden; /* Hides the overflowed text */
+            white-space: nowrap; /* Prevents text from wrapping to the next line */
+            line-break: auto;
+        }
+        .lorem2 {
+            color: green; /* Green color for the second paragraph */
+            text-overflow: clip; /* Clips the text without adding ellipsis */
+            overflow: hidden; /* Hides the overflowed text */
+            white-space: nowrap; /* Prevents text from wrapping to the next line */
+        }
+    </style>
+</head>
+<body>
+    <h1>Fonts</h1>
+    <h2>About fonts</h2>
+    <p>
+        this is a paragraph with the default font. You can change the font family, size, and color using CSS.
+    </p>
+
+    <p class="lorem lorem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quisquam id voluptate maiores. Tempora placeat eum odit distinctio, tenetur fugiat modi. Minima sunt rem quod commodi harum similique nihil quis? Consequuntur facere sit, facilis, dolore corrupti minus fuga iste eaque, velit delectus officia voluptatum provident?</p>
+    <p class="lorem lorem2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quisquam id voluptate maiores. Tempora placeat eum odit distinctio, tenetur fugiat modi. Minima sunt rem quod commodi harum similique nihil quis? Consequuntur facere sit, facilis, dolore corrupti minus fuga iste eaque, velit delectus officia voluptatum provident?</p>
+
+</body>
+</html>

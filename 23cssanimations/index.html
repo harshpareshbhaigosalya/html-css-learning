@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- transition is basically smoothly moving from one place to another -->
+    <title>CSS Transition</title>
+    <style>
+      .container {
+        background-color: rgb(10, 68, 76);
+        width: 50vw;
+        height: 40vh;
+      }
+
+      .box {
+        background-color: aqua;
+        width: 34px;
+        height: 45px;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: shubhkaAnimation;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+      }
+
+      /*use keyframe for animation*/
+      /*refer mdn web docs for this shi*/ 
+      @keyframes shubhkaAnimation {
+        from {
+        }
+        to {
+          transform: translate(1000px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Box</div>
+    </div>
+  </body>
+</html>

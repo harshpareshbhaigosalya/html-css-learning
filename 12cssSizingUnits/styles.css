@@ -1,0 +1,111 @@
+  /* General box styling for visibility */
+.box {
+    margin: 16px 0;
+    padding: 12px;
+    border: 2px solid #2a7ae2;
+    background: #e3f0fc;
+    color: #222;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 6px;
+    transition: width 0.3s, height 0.3s;
+}
+
+/* 1. Pixels (px) - absolute size */
+.px-box {
+    width: 200px; /* Always 200 pixels wide */
+    height: 50px; /* Always 50 pixels tall */
+}
+
+/* 2. em - relative to element's font-size */
+.em-box {
+    font-size: 20px; /* 1em = 20px here */
+    width: 15em;     /* 15 * 20px = 300px */
+    height: 3em;     /* 3 * 20px = 60px */
+}
+
+/* 3. rem - relative to root font-size */
+html {
+    font-size: 16px; /* Default root font-size */     
+}
+.rem-box {
+    font-size: 18px; /* This does NOT affect rem! */
+    width: 20rem;    /* 20 * 16px = 320px */
+    height: 4rem;    /* 4 * 16px = 64px */
+}
+
+/* 4. Percent (%) - relative to parent */
+.parent-percent {
+    width: 400px;
+    border: 2px dashed #e23a2a;
+    padding: 10px;
+    background: #fff7f0;
+}
+.percent-box {
+    width: 60%; /* 60% of parent-percent's width (400px) = 240px */
+    height: 40px;
+    background: #ffe3e3;
+}
+
+/* 5. Viewport units (vw, vh) */
+.vw-box {
+    width: 40vw; /* 40% of viewport width */
+    height: 10vh; /* 10% of viewport height */
+    background: #e3ffe3;
+}
+
+/* 6. auto - browser decides size */
+.auto-box {
+    width: auto;
+    height: auto;
+    background: #f0e3ff;
+    min-width: 100px;
+    min-height: 30px;
+}
+
+/* 7. Mixing units */
+.mixed-box {
+    width: calc(50% + 100px); /* 50% of parent + 100px */
+    min-width: 200px;
+    max-width: 600px;
+    height: 60px;
+    background: #e3f7ff;
+}
+
+/* em in Nested Contexts Demo */
+.em-parent-demo {
+    font-size: 24px; /* Sets the base font size for children */
+    margin: 24px 0;
+    padding: 16px;
+    background: #fffbe3;
+    border: 2px dashed #e2a72a;
+}
+.em-child-1 {
+    font-size: 1em; /* 1em = 24px (from parent) */
+    color: #2a7ae2;
+    margin: 8px 0;
+}
+.em-child-2 {
+    font-size: 2em; /* 2em = 2 * 24px = 48px (from parent) */
+    color: #e23a2a;
+    margin: 8px 0;
+}
+
+/* rem in Nested Contexts Demo */
+.rem-parent-demo {
+    font-size: 32px; /* This does NOT affect rem! */
+    margin: 24px 0;
+    padding: 16px;
+    background: #e3fff7;
+    border: 2px dashed #2ae2a7;
+}
+.rem-child-1 {
+    font-size: 1rem; /* 1rem = 16px (from html) */
+    color: #2a7ae2;
+    margin: 8px 0;
+}
+.rem-child-2 {
+    font-size: 2rem; /* 2rem = 32px (from html) */
+    color: #e23a2a;
+    margin: 8px 0;
+} 

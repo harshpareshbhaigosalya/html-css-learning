@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Universal selector: lowest specificity */
+        * {
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        /* Element selector: lower specificity, specificity is 1*/
+        h1 {
+            color: green;
+            /* color: green !important; makes the specificity 10000, which is higher than any other selector */
+            font-size: 2em; /* Example of an element selector */
+        }
+        /* Class selector: higher than element, specificity is 10 */
+        .special {
+            color: blue;
+        }
+        /* Attribute selector: same specificity as class,  specificity is 10*/
+        /*specifity is 10(class)+10(attr selector) = 20 */    
+        .special[data-highlight] {
+            color: blue; /* This will override the class color due to higher specificity */
+        }
+        /* Attribute selector: specificity is 10 */
+        [data-highlight] {
+            color: orange;
+        }
+        /* specificity is 1+10=11 */
+        h1.special{
+            color: teal; /* This will override the class color due to higher specificity */
+        }
+        /* ID selector: higher than class/attribute, specificity is 100 */
+        #unique {
+            color: purple;
+        } 
+    </style> 
+</head>
+<body>
+    <!--
+      This h1 has:
+      - An element selector (h1)
+      - A class selector (.special)
+      - An attribute selector ([data-highlight])
+      - An ID selector (#unique)
+      - An inline style (highest specificity)
+
+      < Inline style: highest specificity, specificity is 1000
+          -->
+    <h1 id="unique" class="special" data-highlight style="color: red;">
+        Specificity: Inline > ID > Class/At  tribute > Element
+    </h1>
+    <p>
+      Inspect this heading in your browser. Try commenting out the inline style, then the ID, then the class/attribute, to see which color is applied as specificity changes.
+    </p>
+</body>
+</html> 
